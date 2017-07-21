@@ -33,3 +33,5 @@ LABEL org.freenas.interactive="true" 		\
       ]"
 ADD swmfs-5.22.9-1.x86_64.rpm /tmp
 RUN rpm -i /tmp/swmfs-5.22.9-1.x86_64.rpm
+RUN sed -i 's/\$auth //g' /etc/init.d/smallworld_GIS
+RUN sed -i 's/30000,30100/\$SW_MDB_UDP_PORTS/g' /etc/init.d/smallworld_GIS
