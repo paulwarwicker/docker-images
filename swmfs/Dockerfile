@@ -31,3 +31,5 @@ LABEL org.freenas.interactive="true" 		\
               \"optional\": true				\
           } 							\
       ]"
+ADD swmfs-5.22.9-1.x86_64.rpm /tmp
+RUN rpm -i /tmp/swmfs-5.22.9-1.x86_64.rpm
